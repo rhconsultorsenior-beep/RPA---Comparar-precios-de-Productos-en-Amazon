@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="zZjU1xUI5UWgnZNiSVBN2w" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="amazon.com/-/es/ref=nav_logo" CVScreenId="f070c02d-9b87-4f3c-aadd-70b783e5986d" CvElementArea="1304, 148, 62, 55" CvType="Button" DesignTimeRectangle="1308, 152, 57, 50" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='nav-search-submit-button' tag='INPUT' /&gt;" Guid="1e6505f3-e1f9-410a-abac-6a2a91854498" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='atd-param-exclusion-strategy' title='Amazon.com en espanol. Gasta menos. Sonríe más.' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="341a6a39db24149d14693e9459fe6682.png" xmlns="">0e4-1kuPApUaMq6hdOMgetQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

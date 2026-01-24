@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="XxSMHOyI7Uu9MBDOXZYJTA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="amazon.com/-/es/ref=nav_logo" CVScreenId="f070c02d-9b87-4f3c-aadd-70b783e5986d" CvElementArea="396, 150, 916, 53" CvType="InputBox" DesignTimeRectangle="407, 153, 901, 47" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='twotabsearchtextbox' tag='INPUT' type='text' class='nav-input nav-progressive-attribute' placeholder='Buscar en Amazon' aaname='Buscar en Amazon' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="04114ffc-98cb-429e-8b29-b2db80f19505" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='atd-param-exclusion-strategy' title='Amazon.com en espanol. Gasta menos. Sonríe más.' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="f070c02d-9b87-4f3c-aadd-70b783e5986d" CvElementArea="323, 150, 84, 52" CvTextArea="337, 169, 42, 15" CvTextArgument="Todos" CvType="Button" DesignTimeRectangle="340, 156, 40, 42" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='nav-search-label-id' tag='SPAN' type='' class='nav-search-label nav-progressive-content' aaname='Todos' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Todos' /&gt;" Guid="fe494f9c-7965-457c-b39d-9a71263403ee" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="494dc792f2edc22a7d76d95278c2d3c1.png" xmlns="">0K_PAedsFM0eFDn8SY0Pf0w</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

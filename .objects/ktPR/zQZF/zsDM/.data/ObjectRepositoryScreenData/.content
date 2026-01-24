@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryScreenData ContentHash="0VVxUILmWkmQ9f8oMivJxQ" Reference="u5FLTL1EEkm7EfGSzMEVkQ/zsDMfimOmUSECb425hiwxw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryScreenData.Data>
+    <TargetApp x:Key="TargetApp" Area="-9, -9, 1938, 1038" BrowserType="Edge" ContentHash="MB8rtEvl8EC69d-Ikju5_w" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAF5SURBVDhPlVM9S8NQFBW0+QOO2h+gU9vdSbuLNP0HprtDfoBIhYKgWFyFLLpUC10EjbvawcFC4qJDm4CDllQdHHq9JzdfbYLUA4e8d98959738t4cESnMA2afOSuQC40Cg31EkrBtm3Rdp4qqklqtkmEYwUoKDRi4MhZ0u12az+VoYYowzIALg6GMBVqt5gs2ymWyLCuaL+fzQcYEhikDx3H8LkzTpMt2299C2EUG0gbYf6FUikRJZiBtEFaECbo5bjb/ZxAm79Xr/nxb06KY53l+LIG0QaFYjAQ4yOQfQTdTCAy+HJkycIBLfOIQ4AtRhbe1zmajd5fGFt+J+x1hZNBZJfqwEPgbt1sifNwlOoM0NBjcEJ3z8I4XR3E3KXwOiF5aUqy1iEjiDF4vxAS8WpMqvUOiJ2bviKtvSlXkoSDWA4P4Kr89SCJMkMwcB1/qrPATupa8H/4bYHCVGxhNAC0+n8Yd9LliNvzHhOd8wvxGZEYglzWk/AJk0E1AkKBI3AAAAABJRU5ErkJggg==" Reference="u5FLTL1EEkm7EfGSzMEVkQ/zsDMfimOmUSECb425hiwxw" Selector="&lt;html app='msedge.exe' htmlwindowname='atd-param-exclusion-strategy' title='Amazon.com en espanol. Gasta menos. Sonríe más.' /&gt;" Url="https://www.amazon.com/-/es/ref=nav_logo" Version="V2">
+      <TargetApp.Arguments>
+        <p:InArgument x:TypeArguments="x:String" />
+      </TargetApp.Arguments>
+      <TargetApp.WorkingDirectory>
+        <p:InArgument x:TypeArguments="x:String" />
+      </TargetApp.WorkingDirectory>
+      <imageRef attrName="InformativeScreenshot" originalValue="af7fede9f7e14f7b48a7e0cc2b841eed.jpg" xmlns="">0a1mmKzY3OUitbDVMpYV8Jw</imageRef>
+    </TargetApp>
+  </ObjectRepositoryScreenData.Data>
+</ObjectRepositoryScreenData>
