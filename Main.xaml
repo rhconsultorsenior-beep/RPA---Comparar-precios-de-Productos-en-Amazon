@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd2="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:sd2="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -44,6 +44,8 @@
       <x:String>UiPath.Platform.ObjectLibrary</x:String>
       <x:String>UiPath.Platform.SyncObjects</x:String>
       <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -106,15 +108,15 @@
       <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="754,683.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="633.6,683.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Flowchart sap:VirtualizedContainerService.HintSize="633.6,660" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+    <Flowchart sap:VirtualizedContainerService.HintSize="506.40000000000003,634.4" sap2010:WorkflowViewState.IdRef="Flowchart_1">
       <Flowchart.Variables>
-        <Variable x:TypeArguments="sd:DataTable" Name="dtProductosBuscar" />
+        <Variable x:TypeArguments="sd2:DataTable" Name="dtProductosBuscar" />
       </Flowchart.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -152,57 +154,57 @@
                 <av:Size x:Key="ShapeSize">110.4,70.4</av:Size>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="Identificar Producto" sap:VirtualizedContainerService.HintSize="520,1345.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence DisplayName="Identificar Producto" sap:VirtualizedContainerService.HintSize="520,1341.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtProductosBuscar]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="486.4,1285.6" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
-                <ui:ForEachRow.Body>
-                  <ActivityAction x:TypeArguments="sd:DataRow">
+              <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Never]" DisplayName="Edge Amazon.com en espanol. Gasta menos. Sonr" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="486.4,1281.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Always]" ScopeGuid="e44e9181-a028-459b-9ea7-70db035df25e" Version="V2">
+                <uix:NApplicationCard.Body>
+                  <ActivityAction x:TypeArguments="x:Object">
                     <ActivityAction.Argument>
-                      <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                      <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="484.8,1112.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
-                      <Sequence.Variables>
-                        <Variable x:TypeArguments="x:String" Name="strProductoBuscar" />
-                        <Variable x:TypeArguments="x:Int32" Default="0" Name="cntCantidadResultadosBuscar" />
-                      </Sequence.Variables>
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="484.8,1088" sap2010:WorkflowViewState.IdRef="Sequence_5">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Assign sap:VirtualizedContainerService.HintSize="451.2,178.4" sap2010:WorkflowViewState.IdRef="Assign_2">
-                        <Assign.To>
-                          <OutArgument x:TypeArguments="x:String">[strProductoBuscar]</OutArgument>
-                        </Assign.To>
-                        <Assign.Value>
-                          <InArgument x:TypeArguments="x:Object">[CurrentRow("Producto")]</InArgument>
-                        </Assign.Value>
-                      </Assign>
-                      <Assign sap:VirtualizedContainerService.HintSize="451.2,178.4" sap2010:WorkflowViewState.IdRef="Assign_1">
-                        <Assign.To>
-                          <OutArgument x:TypeArguments="x:Int32">[cntCantidadResultadosBuscar]</OutArgument>
-                        </Assign.To>
-                        <Assign.Value>
-                          <InArgument x:TypeArguments="x:Int32">[CInt(CurrentRow("Cnt Resultados").ToString)]</InArgument>
-                        </Assign.Value>
-                      </Assign>
-                      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Never]" DisplayName="Edge Amazon.com en espanol. Gasta menos. Sonr" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="451.2,692" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Always]" ScopeGuid="e44e9181-a028-459b-9ea7-70db035df25e" Version="V2">
-                        <uix:NApplicationCard.Body>
-                          <ActivityAction x:TypeArguments="x:Object">
+                      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtProductosBuscar]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="451.2,1028" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                        <ui:ForEachRow.Body>
+                          <ActivityAction x:TypeArguments="sd2:DataRow">
                             <ActivityAction.Argument>
-                              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                              <DelegateInArgument x:TypeArguments="sd2:DataRow" Name="CurrentRow" />
                             </ActivityAction.Argument>
-                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,494.4" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="449.6,855.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                              <Sequence.Variables>
+                                <Variable x:TypeArguments="x:String" Name="strProductoBuscar" />
+                                <Variable x:TypeArguments="x:Int32" Default="0" Name="cntCantidadResultadosBuscar" />
+                              </Sequence.Variables>
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Todos'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,245.6" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="SameAsCard" ScopeIdentifier="e44e9181-a028-459b-9ea7-70db035df25e" Text="[strProductoBuscar]" Version="V5">
+                              <Assign sap:VirtualizedContainerService.HintSize="416,178.4" sap2010:WorkflowViewState.IdRef="Assign_2">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">[strProductoBuscar]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">[CurrentRow("Producto").ToString]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <Assign sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="Assign_1">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:Int32">[cntCantidadResultadosBuscar]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:Int32">[CInt(CurrentRow("Cnt Resultados").ToString)]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Todos'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,249.6" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="SameAsCard" ScopeIdentifier="e44e9181-a028-459b-9ea7-70db035df25e" Text="[strProductoBuscar]" Version="V5">
                                 <uix:NTypeInto.Target>
                                   <uix:TargetAnchorable BrowserURL="amazon.com/-/es/ref=nav_logo" CVScreenId="f070c02d-9b87-4f3c-aadd-70b783e5986d" ContentHash="XxSMHOyI7Uu9MBDOXZYJTA" CvElementArea="396, 150, 916, 53" CvType="InputBox" DesignTimeRectangle="407, 153, 901, 47" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='twotabsearchtextbox' tag='INPUT' type='text' class='nav-input nav-progressive-attribute' placeholder='Buscar en Amazon' aaname='Buscar en Amazon' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="04114ffc-98cb-429e-8b29-b2db80f19505" InformativeScreenshot="494dc792f2edc22a7d76d95278c2d3c1.png" IsResponsive="True" Reference="u5FLTL1EEkm7EfGSzMEVkQ/GxKaZhtVW0C_qSMGwMtIQA" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='atd-param-exclusion-strategy' title='Amazon.com en espanol. Gasta menos. Sonríe más.' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
                                     <uix:TargetAnchorable.Anchors>
@@ -220,29 +222,29 @@
                               </uix:NClick>
                             </Sequence>
                           </ActivityAction>
-                        </uix:NApplicationCard.Body>
-                        <uix:NApplicationCard.OCREngine>
-                          <ActivityFunc x:TypeArguments="sd1:Image, scg:IEnumerable(scg:KeyValuePair(sd2:Rectangle, x:String))">
-                            <ActivityFunc.Argument>
-                              <DelegateInArgument x:TypeArguments="sd1:Image" Name="Image" />
-                            </ActivityFunc.Argument>
-                          </ActivityFunc>
-                        </uix:NApplicationCard.OCREngine>
-                        <uix:NApplicationCard.TargetApp>
-                          <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Edge" ContentHash="0VVxUILmWkmQ9f8oMivJxQ" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAF5SURBVDhPlVM9S8NQFBW0+QOO2h+gU9vdSbuLNP0HprtDfoBIhYKgWFyFLLpUC10EjbvawcFC4qJDm4CDllQdHHq9JzdfbYLUA4e8d98959738t4cESnMA2afOSuQC40Cg31EkrBtm3Rdp4qqklqtkmEYwUoKDRi4MhZ0u12az+VoYYowzIALg6GMBVqt5gs2ymWyLCuaL+fzQcYEhikDx3H8LkzTpMt2299C2EUG0gbYf6FUikRJZiBtEFaECbo5bjb/ZxAm79Xr/nxb06KY53l+LIG0QaFYjAQ4yOQfQTdTCAy+HJkycIBLfOIQ4AtRhbe1zmajd5fGFt+J+x1hZNBZJfqwEPgbt1sifNwlOoM0NBjcEJ3z8I4XR3E3KXwOiF5aUqy1iEjiDF4vxAS8WpMqvUOiJ2bviKtvSlXkoSDWA4P4Kr89SCJMkMwcB1/qrPATupa8H/4bYHCVGxhNAC0+n8Yd9LliNvzHhOd8wvxGZEYglzWk/AJk0E1AkKBI3AAAAABJRU5ErkJggg==" InformativeScreenshot="af7fede9f7e14f7b48a7e0cc2b841eed.jpg" Reference="u5FLTL1EEkm7EfGSzMEVkQ/zsDMfimOmUSECb425hiwxw" Selector="&lt;html app='msedge.exe' htmlwindowname='atd-param-exclusion-strategy' title='Amazon.com en espanol. Gasta menos. Sonríe más.' /&gt;" Url="https://www.amazon.com/-/es/ref=nav_logo" Version="V2">
-                            <uix:TargetApp.Arguments>
-                              <InArgument x:TypeArguments="x:String" />
-                            </uix:TargetApp.Arguments>
-                            <uix:TargetApp.WorkingDirectory>
-                              <InArgument x:TypeArguments="x:String" />
-                            </uix:TargetApp.WorkingDirectory>
-                          </uix:TargetApp>
-                        </uix:NApplicationCard.TargetApp>
-                      </uix:NApplicationCard>
+                        </ui:ForEachRow.Body>
+                      </ui:ForEachRow>
                     </Sequence>
                   </ActivityAction>
-                </ui:ForEachRow.Body>
-              </ui:ForEachRow>
+                </uix:NApplicationCard.Body>
+                <uix:NApplicationCard.OCREngine>
+                  <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                    <ActivityFunc.Argument>
+                      <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                    </ActivityFunc.Argument>
+                  </ActivityFunc>
+                </uix:NApplicationCard.OCREngine>
+                <uix:NApplicationCard.TargetApp>
+                  <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Edge" ContentHash="0VVxUILmWkmQ9f8oMivJxQ" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAF5SURBVDhPlVM9S8NQFBW0+QOO2h+gU9vdSbuLNP0HprtDfoBIhYKgWFyFLLpUC10EjbvawcFC4qJDm4CDllQdHHq9JzdfbYLUA4e8d98959738t4cESnMA2afOSuQC40Cg31EkrBtm3Rdp4qqklqtkmEYwUoKDRi4MhZ0u12az+VoYYowzIALg6GMBVqt5gs2ymWyLCuaL+fzQcYEhikDx3H8LkzTpMt2299C2EUG0gbYf6FUikRJZiBtEFaECbo5bjb/ZxAm79Xr/nxb06KY53l+LIG0QaFYjAQ4yOQfQTdTCAy+HJkycIBLfOIQ4AtRhbe1zmajd5fGFt+J+x1hZNBZJfqwEPgbt1sifNwlOoM0NBjcEJ3z8I4XR3E3KXwOiF5aUqy1iEjiDF4vxAS8WpMqvUOiJ2bviKtvSlXkoSDWA4P4Kr89SCJMkMwcB1/qrPATupa8H/4bYHCVGxhNAC0+n8Yd9LliNvzHhOd8wvxGZEYglzWk/AJk0E1AkKBI3AAAAABJRU5ErkJggg==" InformativeScreenshot="af7fede9f7e14f7b48a7e0cc2b841eed.jpg" Reference="u5FLTL1EEkm7EfGSzMEVkQ/zsDMfimOmUSECb425hiwxw" Selector="&lt;html app='msedge.exe' htmlwindowname='atd-param-exclusion-strategy' title='Amazon.com en espanol. Gasta menos. Sonríe más.' /&gt;" Url="https://www.amazon.com/-/es/ref=nav_logo" Version="V2">
+                    <uix:TargetApp.Arguments>
+                      <InArgument x:TypeArguments="x:String" />
+                    </uix:TargetApp.Arguments>
+                    <uix:TargetApp.WorkingDirectory>
+                      <InArgument x:TypeArguments="x:String" />
+                    </uix:TargetApp.WorkingDirectory>
+                  </uix:TargetApp>
+                </uix:NApplicationCard.TargetApp>
+              </uix:NApplicationCard>
             </Sequence>
           </FlowStep>
         </FlowStep.Next>
