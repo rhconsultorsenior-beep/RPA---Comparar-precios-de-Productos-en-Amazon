@@ -1,0 +1,6 @@
+{
+  "Name": "RPA Comparar precios de Productos en Amazon",
+  "ProjectType": "Process",
+  "Description": "Proceso para buscar de un DB de productos en Amazon, capturar el precio, calificación, condiciones de entrega, disponibilidad, Guardarlo en Excel, comparar en resultados de un mismo producto y compara entre productos",
+  "MainFile": "Main.xaml"
+}
