@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Mouse óptico ergonómico…",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "hBc86CmrYUmvEvw-kMXApw",
+  "Reference": "u5FLTL1EEkm7EfGSzMEVkQ/hBc86CmrYUmvEvw-kMXApw",
+  "ParentRef": "u5FLTL1EEkm7EfGSzMEVkQ/zsDMfimOmUSECb425hiwxw",
+  "Created": "2026-01-24T23:59:39.0547157Z",
+  "Updated": "2026-01-24T23:59:39.0547157Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.22.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

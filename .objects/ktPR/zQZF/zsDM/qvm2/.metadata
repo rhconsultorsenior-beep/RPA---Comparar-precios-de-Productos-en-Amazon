@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Disponible",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "qvm27lqmg06Z-uErZGeAvg",
+  "Reference": "u5FLTL1EEkm7EfGSzMEVkQ/qvm27lqmg06Z-uErZGeAvg",
+  "ParentRef": "u5FLTL1EEkm7EfGSzMEVkQ/zsDMfimOmUSECb425hiwxw",
+  "Created": "2026-01-24T23:58:16.6471883Z",
+  "Updated": "2026-01-24T23:58:16.6471883Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.22.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

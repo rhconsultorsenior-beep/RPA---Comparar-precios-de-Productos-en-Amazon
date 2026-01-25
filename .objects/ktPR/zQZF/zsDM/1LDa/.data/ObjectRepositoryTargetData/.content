@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="xV72-5uCZk-3iJQGt01Img" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="amazon.com/-/es/ergon%C3%B3mico-nanorecibidor-port%C3%A1til-ordenador-Chromebook/dp/B015NBTAOW/ref=sr_1_1" CVScreenId="54df3bb9-2249-41ed-8bac-801936c3ef5e" CvType="AnyWordGroup" DesignTimeRectangle="593, 449, 33, 35" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl class='a-price-whole' parentid='corePriceDisplay_desktop_feature_div' tag='SPAN' /&gt;" Guid="4f97cae2-6dc1-49b3-b2d5-f95cb5096ccb" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='atd-param-exclusion-strategy' title='Amazon.com: Mouse óptico ergonómico TeckNet Pro 2.4 G con nanorecibidor USB para portátil, ordenador, Chromebook, Macbook, 6 botones, batería de 24 meses, 5 niveles de ajuste de DPI. : Electrónica' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="07ba815fcc9fcf3ce3a275d27aa89ed8.png" xmlns="">0eyZkX1-CM0yh3jIX8xw2RA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
