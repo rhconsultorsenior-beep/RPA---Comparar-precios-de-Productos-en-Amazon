@@ -53,6 +53,21 @@
       <x:String>UiPath.IntegrationService.Activities.Runtime.Helpers.TypeDetailsCustomization</x:String>
       <x:String>UiPath.IntegrationService.Activities.Runtime.Activities</x:String>
       <x:String>UiPath.Platform.Activities</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Excel.Enums</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Excel.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Sharepoint</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Files.Models</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Files.Models</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Files.Enums</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Excel</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Files.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -115,15 +130,19 @@
       <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
       <AssemblyReference>System.Linq.Async</AssemblyReference>
       <AssemblyReference>UiPath.IntegrationService.Activities.Runtime</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="634.0000000000001,683" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="661,682.9999999999999" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Flowchart sap:VirtualizedContainerService.HintSize="634,660" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+    <Flowchart sap:VirtualizedContainerService.HintSize="682,370" sap2010:WorkflowViewState.IdRef="Flowchart_1">
       <Flowchart.Variables>
         <Variable x:TypeArguments="sd2:DataTable" Name="dtProductosBuscar" />
       </Flowchart.Variables>
@@ -163,34 +182,55 @@
                 <av:Size x:Key="ShapeSize">110,70</av:Size>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="Identificar Producto" sap:VirtualizedContainerService.HintSize="594.0000000000001,3687" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence DisplayName="Identificar Producto" sap:VirtualizedContainerService.HintSize="594,3213" sap2010:WorkflowViewState.IdRef="Sequence_3">
               <Sequence.Variables>
                 <Variable x:TypeArguments="sd2:DataTable" Name="dtResultadoBusqueda" />
+                <Variable x:TypeArguments="x:String" Name="strEnvioGT" />
+                <Variable x:TypeArguments="x:String" Name="strDescripcionProductoEncontrado" />
+                <Variable x:TypeArguments="x:String" Name="strCalificacionProducto" />
               </Sequence.Variables>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Never]" DisplayName="Edge Amazon.com en espanol. Gasta menos. Sonr" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="560,3627" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Always]" ScopeGuid="e44e9181-a028-459b-9ea7-70db035df25e" Version="V2">
+              <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Never]" DisplayName="Edge Amazon.com en espanol. Gasta menos. Sonr" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="560,3153" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Always]" ScopeGuid="e44e9181-a028-459b-9ea7-70db035df25e" Version="V2">
                 <uix:NApplicationCard.Body>
                   <ActivityAction x:TypeArguments="x:Object">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="558,3433" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="558,2959" sap2010:WorkflowViewState.IdRef="Sequence_5">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtProductosBuscar]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="524,3047" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                      <ui:BuildDataTable DataTable="[dtResultadoBusqueda]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="524,96" sap2010:WorkflowViewState.IdRef="BuildDataTable_4" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Producto&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Descripción&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;1000&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Precio&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Calificación&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Disponibilidad&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
+                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="524,363" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                        <ui:CommentOut.Body>
+                          <Sequence DisplayName="Actividades ignoradas" sap:VirtualizedContainerService.HintSize="450,248" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:InvokeCode ContinueOnError="{x:Null}" Code="For Each c As System.Data.DataColumn In in_dt.Columns&#xA;    If c.DataType Is GetType(String) Then&#xA;        c.MaxLength = -1&#xA;    End If&#xA;Next&#xA;" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="416,188" sap2010:WorkflowViewState.IdRef="InvokeCode_3">
+                              <ui:InvokeCode.Arguments>
+                                <InOutArgument x:TypeArguments="sd2:DataTable" x:Key="in_dt">[dtResultadoBusqueda]</InOutArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="Argument1" />
+                              </ui:InvokeCode.Arguments>
+                            </ui:InvokeCode>
+                          </Sequence>
+                        </ui:CommentOut.Body>
+                      </ui:CommentOut>
+                      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtProductosBuscar]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="524,2114" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                         <ui:ForEachRow.Body>
                           <ActivityAction x:TypeArguments="sd2:DataRow">
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="sd2:DataRow" Name="CurrentRow" />
                             </ActivityAction.Argument>
-                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="522,2861" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="522,1928" sap2010:WorkflowViewState.IdRef="Sequence_4">
                               <Sequence.Variables>
                                 <Variable x:TypeArguments="x:String" Name="strProductoBuscar" />
                                 <Variable x:TypeArguments="sd2:DataTable" Default="[New System.Data.DataTable]" Name="dtUrl" />
@@ -238,68 +278,95 @@
                                   <uix:TargetAnchorable BrowserURL="https://www.amazon.com/s?k=mause&amp;__mk_es_US=%C3%85M%C3%85%C5%BD%C3%95%C3%91&amp;crid=1E3V4Z0N5A7IK&amp;sprefix=mause%2Caps%2C171&amp;ref=nb_sb_noss_2" DesignTimeRectangle="287, 290, 1064, 6155" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;div' parentid='search' tag='DIV' /&gt;" Guid="245a1bd4-9a5b-4baf-af54-a79512c5f49c" InformativeScreenshot="22d9c4957e8ec9a6636adb2da990eca4.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='atd-param-exclusion-strategy' title='Amazon.com : mause' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
                                 </uix:NExtractData.Target>
                               </uix:NExtractData>
-                              <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="NombreProducto" DataTable="[dtResultadoBusqueda]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="488,225" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_1" />
-                              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtUrl]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="488,1619" sap2010:WorkflowViewState.IdRef="ForEachRow_2" MaxIterations="1">
+                              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtUrl]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="488,911" sap2010:WorkflowViewState.IdRef="ForEachRow_2" MaxIterations="1">
                                 <ui:ForEachRow.Body>
                                   <ActivityAction x:TypeArguments="sd2:DataRow">
                                     <ActivityAction.Argument>
                                       <DelegateInArgument x:TypeArguments="sd2:DataRow" Name="CurrentRow" />
                                     </ActivityAction.Argument>
-                                    <Sequence DisplayName="Cuerpo" sap:VirtualizedContainerService.HintSize="486,1442" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                                    <Sequence DisplayName="Cuerpo" sap:VirtualizedContainerService.HintSize="486,734" sap2010:WorkflowViewState.IdRef="Sequence_7">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <uix:NGoToUrl DisplayName="Go To URL - " sap:VirtualizedContainerService.HintSize="452,127" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" ScopeIdentifier="e44e9181-a028-459b-9ea7-70db035df25e" Url="[CurrentRow(&quot;Url&quot;).ToString]" Version="V5" />
-                                      <uix:NCheckState DisplayName="Comprobar el estado de la aplicación 'Disponible'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="452,1251" sap2010:WorkflowViewState.IdRef="NCheckState_1" Mode="WaitDisappear" ScopeIdentifier="e44e9181-a028-459b-9ea7-70db035df25e" Version="V5">
+                                      <uix:NGoToUrl DisplayName="Go To URL - " sap:VirtualizedContainerService.HintSize="452,61" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" ScopeIdentifier="e44e9181-a028-459b-9ea7-70db035df25e" Url="[CurrentRow(&quot;Url&quot;).ToString]" Version="V5">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NGoToUrl>
+                                      <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="452,61" sap2010:WorkflowViewState.IdRef="Delay_1">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </Delay>
+                                      <uix:NCheckState DisplayName="Comprobar el estado de la aplicación 'Disponible'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="452,548" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="e44e9181-a028-459b-9ea7-70db035df25e" Version="V5">
                                         <uix:NCheckState.IfExists>
-                                          <Sequence DisplayName="El objetivo desaparece." sap:VirtualizedContainerService.HintSize="450,868" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                                          <Sequence DisplayName="El objetivo aparece." sap:VirtualizedContainerService.HintSize="450,25" sap2010:WorkflowViewState.IdRef="Sequence_8">
                                             <Sequence.Variables>
-                                              <Variable x:TypeArguments="x:String" Name="strEnvioGT" />
-                                              <Variable x:TypeArguments="x:String" Name="strCalificacionProducto" />
                                               <Variable x:TypeArguments="x:String" Name="strPrecioProducto" />
-                                              <Variable x:TypeArguments="x:String" Name="strDescripcionProductoEncontrado" />
                                             </Sequence.Variables>
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <uix:NGetText DisplayName="Get Text 'Mouse óptico ergonómico…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,147" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="e44e9181-a028-459b-9ea7-70db035df25e" TextString="[strDescripcionProductoEncontrado]" Version="V5">
+                                            <uix:NGetText DisplayName="Get Text 'Mouse óptico ergonómico…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,143" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="e44e9181-a028-459b-9ea7-70db035df25e" TextString="[strDescripcionProductoEncontrado]" Version="V5">
                                               <uix:NGetText.Target>
                                                 <uix:TargetAnchorable BrowserURL="amazon.com/-/es/ergon%C3%B3mico-nanorecibidor-port%C3%A1til-ordenador-Chromebook/dp/B015NBTAOW/ref=sr_1_1" ContentHash="Rp1R38nW0EqdJnb-k38qsQ" DesignTimeRectangle="501, 202, 566, 128" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='title' tag='H1' /&gt;" Guid="648f99e7-091e-4802-b737-e1b5e02f0fd2" InformativeScreenshot="a06d6f520b423bc90dbbb71b6aade2eb.png" Reference="u5FLTL1EEkm7EfGSzMEVkQ/hBc86CmrYUmvEvw-kMXApw" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='atd-param-exclusion-strategy' title='Amazon.com: Mouse óptico ergonómico TeckNet Pro 2.4 G con nanorecibidor USB para portátil, ordenador, Chromebook, Macbook, 6 botones, batería de 24 meses, 5 niveles de ajuste de DPI. : Electrónica' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
                                               </uix:NGetText.Target>
                                             </uix:NGetText>
-                                            <uix:NGetText DisplayName="Get Text '76.'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,147" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="e44e9181-a028-459b-9ea7-70db035df25e" TextString="[strPrecioProducto]" Version="V5">
+                                            <uix:NGetText DisplayName="Get Text '76.'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,143" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="e44e9181-a028-459b-9ea7-70db035df25e" TextString="[strPrecioProducto]" Version="V5">
                                               <uix:NGetText.Target>
-                                                <uix:TargetAnchorable BrowserURL="amazon.com/-/es/ergon%C3%B3mico-nanorecibidor-port%C3%A1til-ordenador-Chromebook/dp/B015NBTAOW/ref=sr_1_1" CVScreenId="54df3bb9-2249-41ed-8bac-801936c3ef5e" ContentHash="xV72-5uCZk-3iJQGt01Img" CvType="AnyWordGroup" DesignTimeRectangle="593, 449, 33, 35" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl class='a-price-whole' parentid='corePriceDisplay_desktop_feature_div' tag='SPAN' /&gt;" Guid="4f97cae2-6dc1-49b3-b2d5-f95cb5096ccb" InformativeScreenshot="07ba815fcc9fcf3ce3a275d27aa89ed8.png" Reference="u5FLTL1EEkm7EfGSzMEVkQ/1LDaXofrU0u9W9EKw_gWqA" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='atd-param-exclusion-strategy' title='Amazon.com: Mouse óptico ergonómico TeckNet Pro 2.4 G con nanorecibidor USB para portátil, ordenador, Chromebook, Macbook, 6 botones, batería de 24 meses, 5 niveles de ajuste de DPI. : Electrónica' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive" />
+                                                <uix:TargetAnchorable BrowserURL="amazon.com/-/es/ergon%C3%B3mico-nanorecibidor-port%C3%A1til-ordenador-Chromebook/dp/B015NBTAOW/ref=sr_1_1" CVScreenId="53add1c9-10c2-4afe-a0a1-a3400b804d34" ContentHash="fFWwlsOs8UWTgtO6xsBDNw" CvType="AnyWordGroup" DesignTimeRectangle="567, 451, 56, 35" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;span' parentid='corePriceDisplay_desktop_feature_div' tag='SPAN' aria-hidden='true' /&gt;" Guid="bb890570-afa3-4022-be98-d5058ff05dcc" InformativeScreenshot="80cbc2d16b9c5b9a96f700486941aff1.png" Reference="u5FLTL1EEkm7EfGSzMEVkQ/1LDaXofrU0u9W9EKw_gWqA" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='atd-param-exclusion-strategy' title='Amazon.com: Mouse óptico ergonómico TeckNet Pro 2.4 G con nanorecibidor USB para portátil, ordenador, Chromebook, Macbook, 6 botones, batería de 24 meses, 5 niveles de ajuste de DPI. : Electrónica' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="None">
+                                                  <uix:TargetAnchorable.Anchors>
+                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                      <uix:Target CVScreenId="53add1c9-10c2-4afe-a0a1-a3400b804d34" CvTextArea="566, 457, 57, 22" CvTextArgument="ussg99" CvType="Text" DesignTimeRectangle="567, 455, 24, 17" ElementType="Text" FuzzySelectorArgument="&lt;webctrl class='a-price-symbol' parentid='corePriceDisplay_desktop_feature_div' tag='SPAN' type='' aaname='US$' matching:class='fuzzy' fuzzylevel:class='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='US$' /&gt;" Guid="ad6eb14c-6199-4410-bcb1-7f6e247242d2" SearchSteps="FuzzySelector, CV" />
+                                                    </scg:List>
+                                                  </uix:TargetAnchorable.Anchors>
+                                                </uix:TargetAnchorable>
                                               </uix:NGetText.Target>
                                             </uix:NGetText>
-                                            <uix:NGetText DisplayName="Get Text '4.5'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,147" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="e44e9181-a028-459b-9ea7-70db035df25e" TextString="[strCalificacionProducto]" Version="V5">
+                                            <uix:NGetText DisplayName="Get Text '4.5'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,143" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="e44e9181-a028-459b-9ea7-70db035df25e" TextString="[strCalificacionProducto]" Version="V5">
                                               <uix:NGetText.Target>
-                                                <uix:TargetAnchorable BrowserURL="amazon.com/-/es/ergon%C3%B3mico-nanorecibidor-port%C3%A1til-ordenador-Chromebook/dp/B015NBTAOW/ref=sr_1_1" CVScreenId="8e734a2a-de66-4a48-bec9-a7c1cff98dc0" ContentHash="C2SaSLsd0kSMfFokrcLX7Q" CvType="AnyWordGroup" DesignTimeRectangle="501, 455, 20, 15" ElementType="Text" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl parentid='acrPopover' tag='SPAN' type='' class='a-size-small a-color-base' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' /&gt;" Guid="3f60ed95-2653-4eca-9290-0c98e087060a" InformativeScreenshot="421816dd9212d879687239fed8072751.png" Reference="u5FLTL1EEkm7EfGSzMEVkQ/_ldydFq-uU2DWA7QMncxlg" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='atd-param-exclusion-strategy' title='Amazon.com: Mouse óptico ergonómico TeckNet Pro 2.4 G con nanorecibidor USB para portátil, ordenador, Chromebook, Macbook, 6 botones, batería de 24 meses, 5 niveles de ajuste de DPI. : Electrónica' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive" />
+                                                <uix:TargetAnchorable BrowserURL="amazon.com/-/es/Cargador-paquete-bloques-unidades-Lightning/dp/B0B283QP2N/ref=sr_1_3" CVScreenId="dce59fd4-323d-4bd4-ad18-6e2134666718" ContentHash="phOtTY8yRUqOORPs68ng1Q" CvType="AnyWordGroup" DesignTimeRectangle="467, 357, 20, 15" ElementType="Text" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl tag='SPAN' type='' class='a-size-small a-color-base' matching:class='fuzzy' fuzzylevel:class='0.0' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;span&amp;gt;span&amp;gt;a&amp;gt;span' parentclass='a-popover-trigger a-declarative mvt-cm-cr-review-stars-mini-popover' parentid='acrPopover' /&gt;" Guid="9dd7ce19-67a6-47a1-bf14-043033b29f46" InformativeScreenshot="4eecdb6e7b854d616e582cb2b26f8097.png" Reference="u5FLTL1EEkm7EfGSzMEVkQ/_ldydFq-uU2DWA7QMncxlg" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='atd-param-exclusion-strategy' title='Amazon.com: Cargador de iPhone de carga rápida, paquete de 2 bloques de carga de pared tipo C con 2 unidades [6 pies y 10 pies] cable USB C a Lightning para iPhone 14/13/12/12 Pro Max/11/Xs Max/XR/X,AirPods Pro : Celulares y Accesorios' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="None" />
                                               </uix:NGetText.Target>
                                             </uix:NGetText>
-                                            <uix:NGetText DisplayName="Get Text 'Enviar a Guatemala'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,147" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="e44e9181-a028-459b-9ea7-70db035df25e" TextString="[strEnvioGT]" Version="V5">
+                                            <uix:NGetText DisplayName="Get Text 'Enviar a Guatemala'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,143" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="e44e9181-a028-459b-9ea7-70db035df25e" TextString="[strEnvioGT]" Version="V5">
                                               <uix:NGetText.Target>
-                                                <uix:TargetAnchorable BrowserURL="amazon.com/-/es/ergon%C3%B3mico-nanorecibidor-port%C3%A1til-ordenador-Chromebook/dp/B015NBTAOW/ref=sr_1_1" CVScreenId="5ec43a50-3227-4ac2-89f9-e46fe0d238a1" ContentHash="MKl4i5YOpEajJSt7uCz_-A" CvType="AnyWordGroup" DesignTimeRectangle="1112, 380, 126, 26" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='contextualIngressPtLink' tag='A' /&gt;" Guid="1241a2fa-4795-457e-b5b4-4a6ec83d4a2d" InformativeScreenshot="9faad7dd45d5f0f4face531053e5142c.png" Reference="u5FLTL1EEkm7EfGSzMEVkQ/YTkskZliZk-iko5qfxS66g" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='atd-param-exclusion-strategy' title='Amazon.com: Mouse óptico ergonómico TeckNet Pro 2.4 G con nanorecibidor USB para portátil, ordenador, Chromebook, Macbook, 6 botones, batería de 24 meses, 5 niveles de ajuste de DPI. : Electrónica' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive" />
+                                                <uix:TargetAnchorable BrowserURL="amazon.com/-/es/LISEN-paquete-iPhone-r%C3%A1pida-Samsung/dp/B0CFQ5T5F6/ref=sr_1_3" CVScreenId="7f513a08-8b4c-4024-8d0e-af1db24b4ee5" ContentHash="H1EjEOk77026avujhErClA" CvType="AnyWordGroup" DesignTimeRectangle="1112, 542, 206, 31" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='cipInsideDeliveryBlock_feature_div' tag='DIV' /&gt;" Guid="b9ada22c-5ce6-4b14-806d-bbf923dbe255" InformativeScreenshot="349041789c94c5c8dc896cb12bc76a7c.png" Reference="u5FLTL1EEkm7EfGSzMEVkQ/YTkskZliZk-iko5qfxS66g" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='atd-param-exclusion-strategy' title='Amazon.com: LISEN Cable USB C a USB C, paquete de 5 [3.3/3.3/6.6/6.6/10 pies] para iPhone 17, cable de carga rápida de 60 W C a C para iPad, iPhone 17 Air 16 15 Pro Max, Samsung Z Flip 7/S25/S24 USBC a USBC : Videojuegos' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+                                                  <uix:TargetAnchorable.Anchors>
+                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                      <uix:Target CVScreenId="7f513a08-8b4c-4024-8d0e-af1db24b4ee5" CvTextArea="1178, 544, 61, 12" CvTextArgument="Guatemala" CvType="Text" DesignTimeRectangle="1179, 543, 59, 15" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Guatemala' parentid='contextualIngressPtLabel_deliveryShortLine' tag='SPAN' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Guatemala' /&gt;" Guid="0edb9912-f7a5-45a1-a49d-0ab8fc4a42ec" SearchSteps="FuzzySelector, CV" />
+                                                    </scg:List>
+                                                  </uix:TargetAnchorable.Anchors>
+                                                </uix:TargetAnchorable>
                                               </uix:NGetText.Target>
                                             </uix:NGetText>
-                                            <ui:AddDataRow ArrayRow="{x:Null}" DataRow="[{strDescripcionProductoEncontrado, strPrecioProducto, strCalificacionProducto, strEnvioGT}]" DataTable="[dtResultadoBusqueda]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="416,216" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+                                            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{strProductoBuscar,strDescripcionProductoEncontrado, strPrecioProducto, strCalificacionProducto, strEnvioGT}]" DataTable="[dtResultadoBusqueda]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="416,212" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
                                           </Sequence>
                                         </uix:NCheckState.IfExists>
                                         <uix:NCheckState.IfNotExists>
-                                          <Sequence DisplayName="El objetivo no desaparece." sap:VirtualizedContainerService.HintSize="450,94" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                                          <Sequence DisplayName="El objetivo no aparece." sap:VirtualizedContainerService.HintSize="450,234" sap2010:WorkflowViewState.IdRef="Sequence_9">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
+                                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,170" sap2010:WorkflowViewState.IdRef="LogMessage_6" Message="[&quot;Saltando URL (no Disponible): &quot; + CurrentRow(&quot;Url&quot;).ToString]" />
                                           </Sequence>
                                         </uix:NCheckState.IfNotExists>
                                         <uix:NCheckState.Target>
-                                          <uix:TargetAnchorable BrowserURL="amazon.com/-/es/ergon%C3%B3mico-nanorecibidor-port%C3%A1til-ordenador-Chromebook/dp/B015NBTAOW/ref=sr_1_1" CVScreenId="b2774365-239e-4560-8339-7d5fcca93605" ContentHash="KOgAwS34qEG4c_hLpq6HOg" CvTextArea="1111, 418, 88, 20" CvTextArgument="Disponible" CvType="Text" DesignTimeRectangle="1112, 416, 86, 22" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='availability' tag='SPAN' /&gt;" Guid="f8629a51-1d97-457b-95e3-c2a41a006e42" InformativeScreenshot="b76fea3a99fadd3b62b0cdc2696ec6fb.png" Reference="u5FLTL1EEkm7EfGSzMEVkQ/qvm27lqmg06Z-uErZGeAvg" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='atd-param-exclusion-strategy' title='Amazon.com: Mouse óptico ergonómico TeckNet Pro 2.4 G con nanorecibidor USB para portátil, ordenador, Chromebook, Macbook, 6 botones, batería de 24 meses, 5 niveles de ajuste de DPI. : Electrónica' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive" />
+                                          <uix:TargetAnchorable BrowserURL="amazon.com/-/es/LISEN-paquete-iPhone-r%C3%A1pida-Samsung/dp/B0CFQ5T5F6/ref=sr_1_1" CVScreenId="e637f0b2-7314-4a34-93dc-00513984ad23" ContentHash="kp9vWK9tMEmWty2K60rE8Q" DesignTimeRectangle="1112, 578, 86, 22" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='availability' tag='SPAN' visibleinnertext='Disponible' /&gt;" Guid="cbe7479d-6da2-4e7a-aec5-3c2a1af3549a" InformativeScreenshot="7113564381524d94e9439356ac206e60.png" Reference="u5FLTL1EEkm7EfGSzMEVkQ/qvm27lqmg06Z-uErZGeAvg" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='atd-param-exclusion-strategy' title='Amazon.com: LISEN Cable USB C a USB C, paquete de 5 [3.3/3.3/6.6/6.6/10 pies] para iPhone 17, cable de carga rápida de 60 W C a C para iPad, iPhone 17 Air 16 15 Pro Max, Samsung Z Flip 7/S25/S24 USBC a USBC : Videojuegos' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None" />
                                         </uix:NCheckState.Target>
                                       </uix:NCheckState>
                                     </Sequence>
@@ -311,7 +378,7 @@
                         </ui:ForEachRow.Body>
                       </ui:ForEachRow>
                       <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="524,179" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[dtResultadoBusqueda.Rows.Count.ToString]" />
-                      <ui:WriteRange StartingCell="{x:Null}" WorkbookPathResource="{x:Null}" DataTable="[dtResultadoBusqueda]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="524,143" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" WorkbookPath="C:\Users\kevinmercar\Downloads\BusquedaProductos.xlsx" />
+                      <ui:WriteRange StartingCell="{x:Null}" WorkbookPathResource="{x:Null}" DataTable="[dtResultadoBusqueda]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="524,143" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Hoja1" WorkbookPath="C:\Users\kevinmercar\Downloads\BusquedaProductos.xlsx" />
                     </Sequence>
                   </ActivityAction>
                 </uix:NApplicationCard.Body>
@@ -338,6 +405,156 @@
         </FlowStep.Next>
       </FlowStep>
       <x:Reference>__ReferenceID0</x:Reference>
+      <FlowStep sap2010:WorkflowViewState.IdRef="FlowStep_1">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">265,365</av:Point>
+            <av:Size x:Key="ShapeSize">110,70</av:Size>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <Sequence DisplayName="Comprar resutados" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_12">
+          <Sequence.Variables>
+            <Variable x:TypeArguments="x:String" Name="descripcionMasBarata">
+              <Variable.Default>
+                <Literal x:TypeArguments="x:String" Value="" />
+              </Variable.Default>
+            </Variable>
+            <Variable x:TypeArguments="x:String" Name="productoMasBarato">
+              <Variable.Default>
+                <Literal x:TypeArguments="x:String" Value="" />
+              </Variable.Default>
+            </Variable>
+            <Variable x:TypeArguments="x:Double" Name="precioMinimo">
+              <Variable.Default>
+                <VisualBasicValue x:TypeArguments="x:Double" ExpressionText="Double.MaxValue" />
+              </Variable.Default>
+            </Variable>
+            <Variable x:TypeArguments="sd2:DataTable" Name="dtProductosComparar" />
+            <Variable x:TypeArguments="x:String" Name="precioLimpio" />
+          </Sequence.Variables>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:ReadRange Range="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[dtProductosComparar]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="587,120" sap2010:WorkflowViewState.IdRef="ReadRange_4" SheetName="Hoja1" WorkbookPath="C:\Users\kevinmercar\Downloads\BusquedaProductos.xlsx" />
+          <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="PrecioNum" DataTable="[dtProductosComparar]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="587,221" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_2" />
+          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtProductosComparar]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="587,1549" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+            <ui:ForEachRow.Body>
+              <ActivityAction x:TypeArguments="sd2:DataRow">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="sd2:DataRow" Name="CurrentRow" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Cuerpo" sap:VirtualizedContainerService.HintSize="585,1376" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="551,215" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+                    <ui:MultipleAssign.AssignOperations>
+                      <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                          <ui:AssignOperation.To>
+                            <OutArgument x:TypeArguments="x:String">[precioLimpio]</OutArgument>
+                          </ui:AssignOperation.To>
+                          <ui:AssignOperation.Value>
+                            <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Replace(CurrentRow("Precio").ToString, "[^\d.,]", "")]</InArgument>
+                          </ui:AssignOperation.Value>
+                        </ui:AssignOperation>
+                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                          <ui:AssignOperation.To>
+                            <OutArgument x:TypeArguments="x:String">[precioLimpio]</OutArgument>
+                          </ui:AssignOperation.To>
+                          <ui:AssignOperation.Value>
+                            <InArgument x:TypeArguments="x:String">[precioLimpio.Replace(",", ".").Trim]</InArgument>
+                          </ui:AssignOperation.Value>
+                        </ui:AssignOperation>
+                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+                          <ui:AssignOperation.To>
+                            <OutArgument x:TypeArguments="x:Object">[CurrentRow("PrecioNum")]</OutArgument>
+                          </ui:AssignOperation.To>
+                          <ui:AssignOperation.Value>
+                            <InArgument x:TypeArguments="x:Object">[If(String.IsNullOrWhiteSpace(precioLimpio), DBNull.Value, CDbl(precioLimpio))]</InArgument>
+                          </ui:AssignOperation.Value>
+                        </ui:AssignOperation>
+                      </scg:List>
+                    </ui:MultipleAssign.AssignOperations>
+                  </ui:MultipleAssign>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="551,179" sap2010:WorkflowViewState.IdRef="LogMessage_7" Message="[&quot;Filas con precio procesadas: &quot; + dtProductosComparar.Rows.Count.ToString]" />
+                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtProductosComparar]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="551,748" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
+                    <ui:ForEachRow.Body>
+                      <ActivityAction x:TypeArguments="sd2:DataRow">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="sd2:DataRow" Name="CurrentRow" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Cuerpo" sap:VirtualizedContainerService.HintSize="549,562" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <If Condition="[CDbl(CurrentRow(&quot;PrecioNum&quot;)) &lt; precioMinimo]" sap:VirtualizedContainerService.HintSize="515,498" sap2010:WorkflowViewState.IdRef="If_1">
+                            <If.Then>
+                              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="513,270" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="479,206" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
+                                  <ui:MultipleAssign.AssignOperations>
+                                    <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+                                        <ui:AssignOperation.To>
+                                          <OutArgument x:TypeArguments="x:Double">[precioMinimo]</OutArgument>
+                                        </ui:AssignOperation.To>
+                                        <ui:AssignOperation.Value>
+                                          <InArgument x:TypeArguments="x:Double">[CDbl(CurrentRow("PrecioNum"))]</InArgument>
+                                        </ui:AssignOperation.Value>
+                                      </ui:AssignOperation>
+                                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+                                        <ui:AssignOperation.To>
+                                          <OutArgument x:TypeArguments="x:String">[productoMasBarato]</OutArgument>
+                                        </ui:AssignOperation.To>
+                                        <ui:AssignOperation.Value>
+                                          <InArgument x:TypeArguments="x:String">[CurrentRow("Producto").ToString]</InArgument>
+                                        </ui:AssignOperation.Value>
+                                      </ui:AssignOperation>
+                                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+                                        <ui:AssignOperation.To>
+                                          <OutArgument x:TypeArguments="x:String">[descripcionMasBarata]</OutArgument>
+                                        </ui:AssignOperation.To>
+                                        <ui:AssignOperation.Value>
+                                          <InArgument x:TypeArguments="x:String">[CurrentRow("Descripción").ToString]</InArgument>
+                                        </ui:AssignOperation.Value>
+                                      </ui:AssignOperation>
+                                    </scg:List>
+                                  </ui:MultipleAssign.AssignOperations>
+                                </ui:MultipleAssign>
+                              </Sequence>
+                            </If.Then>
+                            <If.Else>
+                              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="513,94" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </Sequence>
+                            </If.Else>
+                          </If>
+                        </Sequence>
+                      </ActivityAction>
+                    </ui:ForEachRow.Body>
+                  </ui:ForEachRow>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="551,170" sap2010:WorkflowViewState.IdRef="LogMessage_8" Message="[&quot;Producto más barato: &quot; &amp; productoMasBarato &amp;&#xD;&#xA;&quot; | Precio: &quot; &amp; precioMinimo.ToString(&quot;C&quot;)]" />
+                </Sequence>
+              </ActivityAction>
+            </ui:ForEachRow.Body>
+          </ui:ForEachRow>
+        </Sequence>
+      </FlowStep>
     </Flowchart>
   </Sequence>
 </Activity>

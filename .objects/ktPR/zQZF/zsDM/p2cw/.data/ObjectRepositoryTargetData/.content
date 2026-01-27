@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="k38-bgTpMUKnrDWRK6VOCA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="amazon.com/-/es/Cargador-paquete-bloques-unidades-Lightning/dp/B0B283QP2N/ref=sr_1_3" DesignTimeRectangle="546, 516, 16, 16" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl isleaf='1' parentid='acrPopover' tag='I' /&gt;" Guid="0ee60c5a-09a1-40fa-92e6-c84752c78053" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='atd-param-exclusion-strategy' title='Amazon.com: Cargador de iPhone de carga rápida, paquete de 2 bloques de carga de pared tipo C con 2 unidades [6 pies y 10 pies] cable USB C a Lightning para iPhone 14/13/12/12 Pro Max/11/Xs Max/XR/X,AirPods Pro : Celulares y Accesorios' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="fbcd18fa77b1c5d1ab6ece82a44414d3.png" xmlns="">0FDLFUj1d-EaIajUzoYeRoA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

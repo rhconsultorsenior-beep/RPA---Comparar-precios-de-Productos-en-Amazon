@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="MKl4i5YOpEajJSt7uCz_-A" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<ObjectRepositoryTargetData ContentHash="H1EjEOk77026avujhErClA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="amazon.com/-/es/ergon%C3%B3mico-nanorecibidor-port%C3%A1til-ordenador-Chromebook/dp/B015NBTAOW/ref=sr_1_1" CVScreenId="5ec43a50-3227-4ac2-89f9-e46fe0d238a1" CvType="AnyWordGroup" DesignTimeRectangle="1112, 380, 126, 26" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='contextualIngressPtLink' tag='A' /&gt;" Guid="1241a2fa-4795-457e-b5b4-4a6ec83d4a2d" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='atd-param-exclusion-strategy' title='Amazon.com: Mouse óptico ergonómico TeckNet Pro 2.4 G con nanorecibidor USB para portátil, ordenador, Chromebook, Macbook, 6 botones, batería de 24 meses, 5 niveles de ajuste de DPI. : Electrónica' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
-      <imageRef attrName="InformativeScreenshot" originalValue="9faad7dd45d5f0f4face531053e5142c.png" xmlns="">0iIwXmMAIL0a6k2Gt9hH_jw</imageRef>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="amazon.com/-/es/LISEN-paquete-iPhone-r%C3%A1pida-Samsung/dp/B0CFQ5T5F6/ref=sr_1_3" CVScreenId="7f513a08-8b4c-4024-8d0e-af1db24b4ee5" CvType="AnyWordGroup" DesignTimeRectangle="1112, 542, 206, 31" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='cipInsideDeliveryBlock_feature_div' tag='DIV' /&gt;" Guid="b9ada22c-5ce6-4b14-806d-bbf923dbe255" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='atd-param-exclusion-strategy' title='Amazon.com: LISEN Cable USB C a USB C, paquete de 5 [3.3/3.3/6.6/6.6/10 pies] para iPhone 17, cable de carga rápida de 60 W C a C para iPad, iPhone 17 Air 16 15 Pro Max, Samsung Z Flip 7/S25/S24 USBC a USBC : Videojuegos' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="7f513a08-8b4c-4024-8d0e-af1db24b4ee5" CvTextArea="1178, 544, 61, 12" CvTextArgument="Guatemala" CvType="Text" DesignTimeRectangle="1179, 543, 59, 15" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Guatemala' parentid='contextualIngressPtLabel_deliveryShortLine' tag='SPAN' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Guatemala' /&gt;" Guid="0edb9912-f7a5-45a1-a49d-0ab8fc4a42ec" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="349041789c94c5c8dc896cb12bc76a7c.png" xmlns="">0uzWE2_AvKECV-h__O2ye7g</imageRef>
     </TargetAnchorable>
     <x:String x:Key="ActivityType">GetText</x:String>
   </ObjectRepositoryTargetData.Data>
