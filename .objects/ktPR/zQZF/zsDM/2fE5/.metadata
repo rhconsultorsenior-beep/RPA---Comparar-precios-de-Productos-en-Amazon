@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Enviar a Guatemala",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "2fE5oTJKjUGQ488rcX-bew",
+  "Reference": "u5FLTL1EEkm7EfGSzMEVkQ/2fE5oTJKjUGQ488rcX-bew",
+  "ParentRef": "u5FLTL1EEkm7EfGSzMEVkQ/zsDMfimOmUSECb425hiwxw",
+  "Created": "2026-02-15T14:53:54.8206956Z",
+  "Updated": "2026-02-15T14:53:54.8206956Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.22.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

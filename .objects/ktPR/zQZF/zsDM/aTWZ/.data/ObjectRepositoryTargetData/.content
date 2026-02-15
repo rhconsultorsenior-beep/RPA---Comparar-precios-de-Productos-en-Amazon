@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="97D6Aop3CUGmzNJ4FE_pRg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="amazon.com" CVScreenId="74adc2e2-157e-4581-80dd-6b4e68f61ed6" CvElementArea="797, 556, 58, 34" CvTextArea="811, 566, 31, 13" CvTextArgument="Listo" CvType="Button" DesignTimeRectangle="800, 558, 53, 30" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='button' /&gt;" Guid="da94ae15-4c09-47b6-a3f6-25d4fd185dc8" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Amazon.com en espanol. Gasta menos. Sonríe más.' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="74adc2e2-157e-4581-80dd-6b4e68f61ed6" CvTextArea="528, 258, 135, 18" CvTextArgument="Elige tu ubicación" CvType="Text" DesignTimeRectangle="529, 238, 297, 56" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='a-popover-header-1' tag='H4' type='' class='a-popover-header-content' aaname='Elige tu ubicación' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Elige tu ubicación' /&gt;" Guid="93123955-f56f-4582-b69e-9e0840b1e641" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="984bcf94a13e83031b0f0ef4f454d272.jpg" xmlns="">08sBmMi-Vfkm4PlRU8hu2fQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="oNKvclTMdU2TwwgpvfMfNg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="amazon.com" CVScreenId="81856c1d-aaff-47fe-94d6-b5160d3fc84c" CvElementArea="526, 498, 330, 37" CvType="InputBox" DesignTimeRectangle="530, 502, 323, 30" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='GLUXCountryListDropdown' tag='SPAN' /&gt;" Guid="ffd3569f-684f-4959-97bd-0ee8b08e3223" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Amazon.com en espanol. Gasta menos. Sonríe más.' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="1234509dfdca2320f58049b52614f4b0.jpg" xmlns="">0atLVd-EOzE6OZUpOvtRwYA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">SelectItem</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
